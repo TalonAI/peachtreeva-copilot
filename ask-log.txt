@@ -1,0 +1,23 @@
+2025-06-02T20:14:21.128Z | test-user | How do I log my hours?
+ => To log your hours, it is important to track all tasks as they are completed using the FreshBooks timer. You should log that time under your client's FreshBooks project in real-time. It's crucial to ensure you are using a client's contracted hours before their billing cycle ends and to avoid working beyond those hours without permission. Additionally, report your time spent to your client at least once per week. For further concerns, you should contact your Relationship Specialist [Source: PeachtreeVA Onboarding Packet (2025 May)].
+
+Would you like help wording an email for reporting purposes, or do you have other questions about time tracking?
+2025-06-02T20:25:24.922Z | test-user | How does Out of Office work? => Out of Office (OOO) planning at PeachtreeVA involves thoughtful planning and timely communication to ensure smooth operations while you are unavailable. Here are the key steps:
+
+1. **Communicate OOO Dates**: Notify your clients and the PeachtreeVA Relationship Specialist about your OOO dates as early as possible.
+
+2. **Calendar Updates**: Add your OOO dates to your personal calendar, the client’s calendar, and the PVA Team calendar.
+
+3. **Email Autoresponder**: Set an autoresponder in your email inboxes with details and an emergency point of contact.
+
+4. **Slack Status**: Update your Slack status to reflect your OOO status.
+
+5. **Long-term Leave**: If you're planning a long-term leave, contact your Relationship Specialist as soon as possible to discuss coverage options【4:0†source】.
+2025-06-02T20:33:24.316Z | test-user | What is our Slack policy? => The Slack policy at PeachtreeVA involves several key steps:
+
+1. **Accept Invitation**: You must accept the emailed invitation to join Peachtree VA on Slack.
+2. **Install Slack Mobile App**: Install the Slack app on your mobile phone to ensure accessibility.
+3. **Notifications**: Turn on notifications to avoid missing any important messages from the PVA Team.
+4. **Introduction on Slack**: Introduce yourself to the Peachtree VA Community by posting in the “General” channel. When introducing yourself, you should mention your role, location, what excites you about joining the team, and any personal details you’d like to share to spark connections, such as special interests or family.
+
+These steps ensure you are integrated effectively into the Peachtree VA communication framework through Slack【4:5†PeachtreeVA Onboarding Packet (2025 May).pdf】.

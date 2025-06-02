@@ -10,20 +10,26 @@ export default function App() {
     setLoading(true);
     setResponse('');
     try {
-      const res = await fetch('http://localhost:3001/api/ask', {
+      const res = await fetch('http://localhost:3001/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: input, user: 'test-user' })
       });
+
+      if (!res.ok) {
+        throw new Error(`Request failed with status ${res.status}`);
+      }
+
       const data = await res.json();
-      setResponse(data.reply || 'No response received.');
-    } catch (err) {
+      setResponse(data.answer || data.reply || 'No response received.');
+    } catch (err: any) {
+      console.error('❌ Error fetching from backend:', err.message);
       setResponse('Error communicating with assistant.');
     }
     setLoading(false);
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleAsk();

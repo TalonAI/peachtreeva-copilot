@@ -36,19 +36,20 @@ export default function App() {
 
     clearTimeout(timeoutId);
 
-    if (!res.ok) {
-      throw new Error(`Request failed with status ${res.status}`);
-    }
+    console.log("🔁 Response status:", res.status);
+    const text = await res.text();
+    console.log("📥 Raw response text:", text);
 
-    const data = await res.json();
+    const data = JSON.parse(text);
     setResponse(data.answer || data.reply || 'No response received.');
   } catch (err: any) {
-    console.error('❌ Error fetching from backend:', err.message);
+    console.error('❌ Error in fetch:', err.message);
     setResponse('Error communicating with assistant.');
   }
 
   setLoading(false);
 };
+
 
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {

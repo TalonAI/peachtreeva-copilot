@@ -21,3 +21,27 @@ Would you like help wording an email for reporting purposes, or do you have othe
 4. **Introduction on Slack**: Introduce yourself to the Peachtree VA Community by posting in the “General” channel. When introducing yourself, you should mention your role, location, what excites you about joining the team, and any personal details you’d like to share to spark connections, such as special interests or family.
 
 These steps ensure you are integrated effectively into the Peachtree VA communication framework through Slack【4:5†PeachtreeVA Onboarding Packet (2025 May).pdf】.
+2025-06-02T21:10:36.560Z | test-user | How do I enter my hours? => To enter your hours, you should use the FreshBooks timer to track all tasks as they are completed. You must log this time under your client's FreshBooks project in real-time. It's important to ensure you're using a client’s contracted hours before the last day of their billing cycle and not working over the contracted hours without obtaining permission from the client【4:0†PeachtreeVA Onboarding Packet (2025 May).pdf】. 
+
+If you need further guidance or support with using FreshBooks, you can consult their digital help center or reach out to them via email at support@freshbooks.com【4:2†PeachtreeVA Onboarding Packet (2025 May).pdf】. 
+
+Would you like help with anything else related to time tracking?
+2025-06-02T21:20:53.486Z | test-user | What’s the Peachtree protocol for going OOO? => To follow the PeachtreeVA protocol for going out of office (OOO), you should:
+
+1. Communicate your OOO dates to your client(s) and the PVA Relationship Specialist via email. It's best to do this as early as possible.
+2. Add the OOO dates to your calendar, the client’s calendar, and the PVA Team calendar.
+3. Ensure your autoresponder is set in all relevant email inboxes, and list an emergency point of contact.
+4. Update your Slack status to reflect your OOO date(s).
+5. If you are anticipating a long-term leave, contact your Relationship Specialist ASAP to discuss coverage options【4:1†source】.
+
+Would you like help wording an email for notifying your clients?
+2025-06-03T00:19:58.376Z | test-user | How to submit my hours? => To submit your hours at PeachtreeVA, you will need to track all tasks using the Freshbooks timer and log that time under your client's Freshbooks project in real-time. Your invoice for work completed must be sent to Peachtree VA once per month on the last calendar day of each month or the morning of the first day of the following month. You can find more detailed instructions for generating and sending your invoice in the FreshBooks How-To Guide provided in your onboarding materials【4:1†source】.
+
+Would you like help wording an email for that?
+2025-06-03T01:31:19.649Z | test-user | How to log my hours => To log your hours, you need to track all tasks as they are completed using the Freshbooks timer and log that time under your client(s) Freshbook project in real-time【4:0†PeachtreeVA Onboarding Packet (2025 May)】.
+
+Would you like help wording an email for that?
+2025-06-03T14:39:21.525Z | test-user | How to I log my hours? => To log your hours at PeachtreeVA, you must track all tasks in real-time using the Freshbooks timer. This requires logging the time under your client's Freshbook project as you complete each task. It is essential to ensure you use the client’s contracted hours before the last day of their billing cycle and not exceed those hours without permission【4:0†source】.
+
+Would you like help wording an email for time tracking inquiries, or need a refresher on weekly availability reporting?
+2025-06-03T14:40:00.373Z | test-user | How do I log my hours? => To log your hours as a virtual assistant with PeachtreeVA, you need to track all tasks using the Freshbooks timer and log that time under your client(s) Freshbook project in real-time. It is important to do this as you complete each task【4:0†PeachtreeVA Onboarding Packet (2025 May).pdf】.

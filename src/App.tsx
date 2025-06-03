@@ -1,9 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import logoDark from '/logo-dark.png';
+import logoLight from '/logo-light.png';
 
 export default function App() {
   const [input, setInput] = useState('');
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
+  const [logo, setLogo] = useState(logoLight);
+
+  useEffect(() => {
+    const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
+    const updateLogo = () => {
+      setLogo(darkMode.matches ? logoLight : logoDark);
+    };
+    updateLogo();
+    darkMode.addEventListener('change', updateLogo);
+    return () => darkMode.removeEventListener('change', updateLogo);
+  }, []);
 
   const handleAsk = async () => {
     if (!input.trim()) return;
@@ -39,7 +52,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-zinc-900 text-white px-6 py-8 font-sans">
       <header className="flex items-center mb-10 space-x-4">
-        <img src="/peachtreeva-logo-1.png" alt="PeachtreeVA Logo" className="h-12 w-auto" />
+        <img src={logo} alt="PeachtreeVA Logo" className="h-12 w-auto" />
         <h1 className="text-3xl md:text-4xl font-bold">KnowledgeOps Copilot</h1>
       </header>
 

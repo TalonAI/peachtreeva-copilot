@@ -16,7 +16,12 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+}));
+
 app.use(bodyParser.json());
 
 const assistantId = process.env.OPENAI_ASSISTANT_ID;
@@ -64,7 +69,7 @@ app.post('/ask', async (req, res) => {
 
     // Step 4: Poll for completion
     let attempts = 0;
-    const maxAttempts = 10;
+    const maxAttempts = 20;
     let runStatus;
 
     console.log("➡️ Polling using thread.id:", thread.id, "| run.id:", run.id);
@@ -111,6 +116,7 @@ app.post('/ask', async (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`🧠 KnowledgeOps API (Assistants API) running at http://localhost:${port}`);
+  console.log(`🧠 KnowledgeOps API (Assistants API) running on port ${port}`);
+
 });
 

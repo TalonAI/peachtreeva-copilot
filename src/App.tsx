@@ -19,29 +19,37 @@ export default function App() {
   }, []);
 
   const handleAsk = async () => {
-    if (!input.trim()) return;
-    setLoading(true);
-    setResponse('');
-    try {
-      const res = await fetch('https://peachtreeva-backend.onrender.com/ask', {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify({ prompt: input, user: 'test-user' })
-	});
+  if (!input.trim()) return;
+  setLoading(true);
+  setResponse('');
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 sec timeout
 
-      if (!res.ok) {
-        throw new Error(`Request failed with status ${res.status}`);
-      }
+  try {
+    const res = await fetch('https://peachtreeva-backend.onrender.com/ask', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: input, user: 'test-user' }),
+      signal: controller.signal
+    });
 
-      const data = await res.json();
-      setResponse(data.answer || data.reply || 'No response received.');
-    } catch (err: any) {
-      console.error('❌ Error fetching from backend:', err.message);
-      setResponse('Error communicating with assistant.');
+    clearTimeout(timeoutId);
+
+    if (!res.ok) {
+      throw new Error(`Request failed with status ${res.status}`);
     }
-    setLoading(false);
-  };
+
+    const data = await res.json();
+    setResponse(data.answer || data.reply || 'No response received.');
+  } catch (err: any) {
+    console.error('❌ Error fetching from backend:', err.message);
+    setResponse('Error communicating with assistant.');
+  }
+
+  setLoading(false);
+};
+
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {

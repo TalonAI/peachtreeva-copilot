@@ -12,7 +12,8 @@ const openai = new OpenAI({
 });
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
+
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -107,6 +108,8 @@ app.post('/ask', async (req, res) => {
   }
 });
 
+
 app.listen(port, () => {
   console.log(`🧠 KnowledgeOps API (Assistants API) running at http://localhost:${port}`);
 });
+

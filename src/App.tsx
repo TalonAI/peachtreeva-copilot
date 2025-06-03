@@ -23,11 +23,12 @@ export default function App() {
     setLoading(true);
     setResponse('');
     try {
-      const res = await fetch('http://localhost:3001/ask', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: input, user: 'test-user' })
-      });
+      const res = await fetch('https://peachtreeva-backend.onrender.com/ask', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({ prompt: input, user: 'test-user' })
+	});
+
 
       if (!res.ok) {
         throw new Error(`Request failed with status ${res.status}`);
